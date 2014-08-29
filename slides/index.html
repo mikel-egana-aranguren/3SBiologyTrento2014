@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js - The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Mikel Egaña Aranguren" >
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="css/reveal.css">
+<!-- 		<link rel="stylesheet" href="css/theme/default.css" id="theme"> -->
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+		<section>
+			<section>
+				<br>
+				<h3>Building biomedical ontologies for a Life Sciences Semantic Web</h3>
+				<br><br>
+				<h4>3S Biology Summer School (Trento, 2014)</h4>
+				<br><br>
+				<p>
+					<small>Mikel Egaña Aranguren</small><br>
+					<small><a href="http://mikeleganaaranguren.com/">http://mikeleganaaranguren.com</a> / <a href="mikel.egana@ehu.es">mikel.egana@ehu.es</a></small><br>
+				</p>
+			</section>
+			<section>
+				<br>
+
+				<p align="left"><a href="http://mikeleganaaranguren.wordpress.com/teaching/">http://mikeleganaaranguren.wordpress.com/teaching/</a></p><br> 
+				<p align="left"><a href="http://mikel-egana-aranguren.github.io/3SBiologyTrento2014/">http://mikel-egana-aranguren.github.io/3SBiologyTrento2014/</a></small></p><br>
+				<p align="left"><a href="http://github.com/mikel-egana-aranguren/3SBiologyTrento2014">http://github.com/mikel-egana-aranguren/3SBiologyTrento2014</a></small></p><br>
+				<br><br>
+				<img  src="by-nc-sa.eu_petit.png" alt="by-nc-sa">
+			</section>
+		</section>
+		<section>
+			<section>
+				<br><br><br><br>
+				<h2>Life Sciences Semantic Web</h2>
+			</section>
+			<section>
+				<h3>Life Sciences Semantic Web</h3>
+				<br/>
+				<img  src="SW_Mark.png" alt="SW_Mark.png">
+			</section>
+			<section>
+				<h3>Semantic Web Stack</h3>
+				<br/>
+				<img  src="SW_stack.png" alt="SW_stack.png">
+			</section>
+			<section>
+				<h3>Ontologies and Semantic Web</h3>
+				<br/>
+				<img src="OntologiaInstancias.png" alt="OntologiaInstancias.png">
+			</section>
+		</section>
+		<section>
+			<section>
+				<br><br><br><br>
+				<h2>Biomedical Ontologies</h2>
+			</section>
+			<section>
+<!-- 				<h3></h3> -->
+				<br/>
+				<img  src="ontologia.png" alt="ontologia.png">
+			</section>	
+			<section>
+				<h3>Functions</h3>
+				<br/>
+				Robert Stevens and phil lord book chapter
+			</section>
+			<section>
+				<h3>Gene Ontology</h3>
+				<br>
+				<p align="left">Vocabulario controlado para describir la función molecular, el componente celular y el proceso biológico de genes (“Gene Products”)</p><br>
+				<p align="left">Integración de información (GAF files), explotación estructura (ej. Term Enrichment)</p><br>
+			</section>
+			
+			<section>
+				<h3>OBO</h3>
+				<br>
+				<p align="left">ChEBI, Cell Type, Sequence Ontology, Phenotype Ontology, UberOntology, ...  </p><br>
+				<p align="left">"Meta-Ontologías": Basic Formal Ontology (BFO), OBO Relation Ontology (RO)</p><br>
+				<p align="left">Mucho contenido de relativamente alta calidad pero ... </p><br>
+				<p align="left" class="fragment roll-in">... la mayoría de las ontologías son muy pobres axiomáticamente</p><br>
+				<p align="left" class="fragment roll-in">... OBO format (*)</p><br>
+			</section>
+		</section>
+		<section>
+			<section>
+				<br><br><br><br>
+				<h2>Ontology engineering languages</h2>
+			</section>
+			<section>
+				<h3>OBO format ("DEPRECATED"!)</h3>
+				<br>
+				<img  src="obo_format.png" alt="obo_format.png">
+			</section>
+			<section>
+						<h3>OWL</h3>
+						<br>
+						<p align="left">OWL es un estándar oficial del <a href="www.w3.org">W3C</a> para crear ontologías en la web con un semántica precisa y formal</p><br>
+						<p align="left"><a href="http://www.w3.org/standards/techs/owl">http://www.w3.org/standards/techs/owl</a></p>
+					</section>
+					<section>
+						<h3>OWL</h3>
+						<br>
+						<p align="left">OWL se basa en Lógica Descriptiva (DL)</p><br>
+						<p align="left">Representación computacional de un dominio de conocimiento:
+						<ul>
+							<li>Razonamiento automático: inferir conocimiento "nuevo" (*), consultas, consistencia, clasificar entidades contra la ontología, ...</li>						
+							<li>Integrar conocimiento disperso</li>
+						</ul>
+						</p>
+					</section>
+
+					<section>
+						<h3>Sintaxis OWL</h3>
+						<br>
+						<p align="left">Para ordenadores: <strong>RDF/XML</strong>, OWL/XML, ...</p>
+						<img src="OWL_rdf_xml.png">
+						<p align="left">Para humanos: <strong>Manchester OWL Syntax</strong>, functional, ...</p>
+						<img src="OWL_mos.png">
+					</section>
+					<section>
+						<h3>Semántica OWL</h3>
+						<br>
+						<p align="left">Una ontología OWL esta compuesta de:
+							<ul>
+								<li>Entidades: las entidades del dominio de conocimiento, <em>identificadas con URIs</em>, introducidas por el desarrollador 
+								("proteina", "participa_en", ...)</li>
+								<li>Axiomas: relacionan las entidades mediante el <em>vocabulario</em> lógico que ofrece OWL</li>
+							</ul>						
+						</p>
+						<p align="left">Una ontología puede importar otra (owl:import) y hacer referencia a sus entidades mediante axiomas</p>
+					</section>
+					<section>
+						<h3>Entidades OWL</h3>
+						<br>
+
+							<ul>
+								<li>Individuos</li>
+								<li>Clases</li>
+								<li>Propiedades
+															<ul>
+																<li>Objeto</li>
+																<li>Anotación</li>
+																<li>Datos</li>
+															</ul>	
+								</li>
+							</ul>						
+						</p>
+					</section>
+					<section>
+						<h3>Individuos</h3>
+						<br><br>
+						<img src="Pizza_inds.png">
+						<p align="right">
+							<small><a href="http://owl.cs.manchester.ac.uk/tutorials/protegeowltutorial/">Manchester tutorial</a></small></p>
+					</section>
+					<section>
+						<h3>Propiedades</h3>
+						<br><br>
+						<img src="Pizza_props.png">
+						<p align="right">
+							<small><a href="http://owl.cs.manchester.ac.uk/tutorials/protegeowltutorial/">Manchester tutorial</a></small></p>
+					</section>
+					<section>
+						<h3>Clases</h3>
+						<br><br>
+						<img src="Pizza_clases.png">
+						<p align="right">
+							<small><a href="http://owl.cs.manchester.ac.uk/tutorials/protegeowltutorial/">Manchester tutorial</a></small></p>
+					</section>
+					<section>
+						<h3>Semántica OWL</h3>
+						<br>
+						<p align="left">Una ontología OWL formada por individuos y clases es una "Base de Conocimiento" (KB) formada por:
+						<br>
+						<ul>
+							<li>TBox (Terminological Box): clases (~ "esquema")</li>		
+							<li>Abox (Assertional Box): individuos (~ "datos")</li>				
+						</ul>
+						</p>
+					</section>
+					<section>
+						<h3>Clases</h3>
+						<br><br>
+						<img src="Clase_OWL.png">
+					</section>
+					<section>
+						<h3>Clase subclase</h3>
+						<br><br>
+						<img src="Clase_SubClase_OWL.png">
+					</section>
+					<section>
+						<h3>Clases equivalentes</h3>
+						<br><br>
+						<img src="Clase_equiv_OWL.png">
+					</section>
+					<section>
+						<h3>Jerarquía de clases (Taxonomía)</h3>
+						<br><br>
+						<img src="OWL_is_a.png">
+					</section>
+					<section>
+						<h3>Condiciones necesarias</h3>
+						<br><br>
+						<img src="OWL_necessary.png">
+					</section>
+					<section>
+						<h3>Condiciones necesarias y suficientes</h3>
+						<br><br>
+						<img src="OWL_necessary_and_sufficient.png">
+					</section>
+					<section>
+						<h3>Restricción existencial (some)</h3>
+						<br><br>
+						<img src="Pizza_existential.png">
+						<p align="right">
+							<small><a href="http://owl.cs.manchester.ac.uk/tutorials/protegeowltutorial/">Manchester tutorial</a></small></p>
+					</section>
+					<section>
+						<h3>Restricción universal (only)</h3>
+						<br><br>
+						<img src="Pizza_universal.png">
+						<p align="right">
+							<small><a href="http://owl.cs.manchester.ac.uk/tutorials/protegeowltutorial/">Manchester tutorial</a></small></p>
+					</section>
+					
+					<section>
+						<h3>Restricción a un individuo (value)</h3>
+						<br><br>
+						<img src="Pizza_has_value.png">
+						<p align="right">
+							<small><a href="http://owl.cs.manchester.ac.uk/tutorials/protegeowltutorial/">Manchester tutorial</a></small></p>
+					</section>
+					
+					<section>
+						<h3>Restricciones cardinales</h3>
+						<br><br>
+						<img src="Pizza_cardinality.png">
+						
+						<p align="right">(+ QCR!)
+							<small> <a href="http://owl.cs.manchester.ac.uk/tutorials/protegeowltutorial/">Manchester tutorial</a></small></p>
+					</section>
+					
+					<section>
+						<h3>Más axiomas para clases</h3>
+						<br>
+						<p align="left">disjointFrom</p>
+						<p align="left">booleanos: not, or, and</p><br>
+						<img src="owl_boolean.png">
+						<p align="right">
+							<small><a href="http://owl.cs.manchester.ac.uk/tutorials/protegeowltutorial/">Manchester tutorial</a></small></p>
+					</section>
+					<section>
+						<h3>Expresiones complejas</h3>
+						<br><br>
+						<img src="OWL_complex_expression.png">
+					</section>
+			
+					<section>
+						<h3>Propiedades OWL</h3>
+						<br>
+						<img src="OWL_props.png">
+						<p align="right">
+							<small><a href="http://owl.cs.manchester.ac.uk/tutorials/protegeowltutorial/">Manchester tutorial</a></small></p>
+					</section>	
+					
+					<section>
+						<h3>Jerarquía propiedades</h3>
+						<br><br>
+						<p align="left">Jerarquía propiedad-subpropiedad (~taxonomía pero con propiedades), ej:
+							<ul>
+								<li>interacciona con
+									<ul>
+										<li>mata a
+											<ul>
+												<li>estrangula a</li>											
+											</ul>
+										</li>									
+									</ul>								
+								</li>							
+							</ul>		
+						</p>
+					</section>	
+					<section>
+						<h3>Características propiedades objeto</h3>
+						<br>
+						<img src="props_f_1.png">
+						<p align="right">
+							<small><a href="http://owl.cs.manchester.ac.uk/tutorials/protegeowltutorial/">Manchester tutorial</a></small></p>
+					</section>	
+					<section>
+						<h3>Características propiedades objeto</h3>
+						<br>
+						<img src="props_f_2.png">
+						<p align="right">
+							<small><a href="http://owl.cs.manchester.ac.uk/tutorials/protegeowltutorial/">Manchester tutorial</a></small></p>
+					</section>	
+					<section>
+						<h3>Características propiedades objeto</h3>
+						<br>
+						<img src="props_f_3.png">
+						<p align="right">
+							<small><a href="http://owl.cs.manchester.ac.uk/tutorials/protegeowltutorial/">Manchester tutorial</a></small></p>
+					</section>	
+					<section>
+						<h3>Características propiedades datos</h3>
+						<br>
+						<p align="left">Solo funcional</p><br>
+						<p align="left">Dominio clases, rango datatypes</p>
+					</section>	
+					<section>
+						<h3>Propiedades anotación</h3>
+						<br>
+						<p align="left">Anotar con lenguaje natural entidades 
+						(propiedades, clases, individuos), axiomas, ontologías</p><br>
+						<p align="left">Fuera de la semántica</p><br>
+						<p align="left">rdfs:label, rdfs:comment, dublin core, a medida</p>
+					</section>
+					<section>
+						<h3>Individuos</h3>
+						<br>
+						<p align="left">Miembro de una o más clases (Types)</p><br>
+						<p align="left">Igual (SameAs) o diferente (DifferentFrom) a otro individuo</p><br>
+						<p align="left">Relaciones binarias con otros individuos o datos (triples), positivas o negativas</p><br>
+					</section>
+					<section>
+						<h3>Razonamiento automático</h3>
+						<br>
+						<p align="left">Un razonador infiere los "nuevos" axiomas que implican los axiomas que hemos introducido en la ontología</p><br>
+						<p align="left">El razonador infiere <i>todos</i> los axiomas; es útil para tratar con conocimiento complejo</p><br>
+						<p align="left">Open World Assumption (OWA)</p>
+						<br>
+						<p align="left">(Falta de) Unique Name Assumption (¡owl:sameAs!)</p>
+					</section>
+					<section>
+						<h3>Tareas más comunes razonamiento automático</h3>
+						<br>
+						<p align="left">Mantener taxonomía</p><br>
+						<p align="left">Consistencia</p><br>
+						<p align="left">Clasificar entidades y consultas</p>
+					</section>
+					<section>
+						<h3>Mantener una taxonomía</h3>
+						<br>
+						<img src="Normalisation_instance.png">
+					</section>
+					<section>
+						<h3>Consistencia</h3>
+						<br>
+						<img src="consistencia.png">
+					</section>
+					<section>
+						<h3>Clasificar entidades, consultas</h3>
+						<br><br>
+						<p align="left">Clasificar entidades: dada una entidad nueva, como se relaciona con las 
+						demas entidades (types, equivalentTo, subClassOf, triples)</p><br>
+						<p align="left">Una consulta es una clase anónima que clasificamos contra la ontología como si fuese una entidad</p>
+					</section>										
+				</section>
+		</section>
+		<section>
+			<section>
+				<br><br><br><br>
+				<h2>Ontology engineering tools</h2>
+			</section>
+			<section>
+					<h3>OWL API</h3>
+					<br>
+					<p align="left"><a href="http://owlapi.sourceforge.net/">http://owlapi.sourceforge.net/</a></p><br>
+					<p align="left"><a href="http://github.com/owlcs/owlapi">http://github.com/owlcs/owlapi</a></p><br>
+			</section>
+			<section>
+					<h3>Protege</h3>
+					<br>
+			</section>
+			<section>
+					<h3>TopBraid composer</h3>
+					<br>
+			</section>
+			<section>
+					<h3>Neon</h3>
+					<br>
+			</section>
+			<section>
+					<h3>Reasoners!?</h3>
+					<br>
+			</section>
+		</section>
+		<section>
+			<section>
+				<br><br><br><br>
+				<h2>Ontology engineering practices</h2>
+				
+				
+
+
+			</section>
+			<section>
+			<h3>Scope</h3>
+				<br>
+				<p>Define and stick to a scope (e.g. Cell Cycle) </p>
+			</section>
+			<section>
+			<h3>Identifiers</h3>
+				<br>
+				URI scheme
+				common identifiers: identifiers.org
+				alphanumeric ids + rdfs:label
+			</section>
+			<section>
+			<h3>Interoperability</h3>
+				<br>
+				<p align="left" class="fragment roll-in">Commonly used Upper Level Ontology (e.g. BFO) </p>
+				<p align="left" class="fragment roll-in">Commonly used properties (e.g. RO) </p>
+				<p align="left" class="fragment roll-in">Reuse exsiting ontologies, extend them if needed ... </p>
+				<p align="left" class="fragment roll-in"> ... and only then, and if completely necessary, create new classes </p>
+			</section>
+			<section>
+			<h3>Automate tasks</h3>
+				<br>
+				<p> 
+				    Manipulation: OWL API, OPPL, Tawny OWL, Mungall
+				    Releases: OORT, Version control (Mungall and Clark posts)..</p>
+				    <p>Apply reasoning continously</p>
+			</section>
+			<section>
+			<h3>Documentation</h3>
+				<br>
+				<p>Use annotation properties a lot</p>
+			</section>
+			<section>
+			<h3>Ontology Design Patterns</h3>
+				<br>
+				<p></p>
+			</section>
+			<section>
+			<h3>Pitfalls</h3>
+				<br>
+				<p>Pitfall detector</p>
+			</section>
+			
+			<h3>Semantic Web best practices</h3>
+				<br>
+				Use isDescribedBy predicate
+			</section>
+
+			<section>
+				<h3>Community</h3>
+				<br>
+				<p align="left"><a href="http://www.obofoundry.org/">OBO Foundry</a>: Open, Common shared syntax, 
+				  Unique identifier space,
+				  Versions, 
+				  Delineated content, 
+				  Definitions,
+				  OBO Relation Ontology, 
+				  Well documented,
+				  Users, 
+				  Collaboratively</p><br>
+			</section>
+			<section>
+			<h3>Community</h3>
+				<br>NCBO BioPortal
+
+			</section>
+		</section>
+		</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
