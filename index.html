@@ -44,6 +44,7 @@
 				<p>
 					<small>Mikel Egaña Aranguren</small><br>
 					<small><a href="http://mikeleganaaranguren.com/">http://mikeleganaaranguren.com</a> / <a href="mikel.egana@ehu.es">mikel.egana@ehu.es</a></small><br>
+					<img  src="blanco_pequeno.jpg" alt="upv-ehu eman ta zabal zazu">
 				</p>
 			</section>
 			<section>
@@ -89,24 +90,16 @@
 			</section>	
 			<section>
 				<h3>Functions</h3>
-				<br/>
-				Robert Stevens and phil lord book chapter
+				<br/><br/>
+				<p align="left">Schema fo Knowledge Base (e.g. ), vocabulary for publishing Linked Data, vocabulary for common database  annotation (e.g. Gene Ontology), text mining, service description (e.g. SADI), data analysis, ... </p>
+				
 			</section>
 			<section>
 				<h3>Gene Ontology</h3>
 				<br>
-				<p align="left">Vocabulario controlado para describir la función molecular, el componente celular y el proceso biológico de genes (“Gene Products”)</p><br>
-				<p align="left">Integración de información (GAF files), explotación estructura (ej. Term Enrichment)</p><br>
-			</section>
-			
-			<section>
-				<h3>OBO</h3>
-				<br>
-				<p align="left">ChEBI, Cell Type, Sequence Ontology, Phenotype Ontology, UberOntology, ...  </p><br>
-				<p align="left">"Meta-Ontologías": Basic Formal Ontology (BFO), OBO Relation Ontology (RO)</p><br>
-				<p align="left">Mucho contenido de relativamente alta calidad pero ... </p><br>
-				<p align="left" class="fragment roll-in">... la mayoría de las ontologías son muy pobres axiomáticamente</p><br>
-				<p align="left" class="fragment roll-in">... OBO format (*)</p><br>
+				<p align="left">Controlled vocabulary for describing molecular function, cellular component and biological process of <i>gene products</i></p><br>
+				<p align="left">Database integration through GAF files, data analysis (e.g. Term Enrichment), ...
+				</p><br>
 			</section>
 		</section>
 		<section>
@@ -120,131 +113,127 @@
 				<img  src="obo_format.png" alt="obo_format.png">
 			</section>
 			<section>
-						<h3>OWL</h3>
+						<h3>Web Ontology Language (OWL)</h3>
 						<br>
-						<p align="left">OWL es un estándar oficial del <a href="www.w3.org">W3C</a> para crear ontologías en la web con un semántica precisa y formal</p><br>
+						<p align="left">A <a href="www.w3.org">W3C</a> official standard for creating ontologies in a Semantic Web setting with computationally precise and formal semantics</p><br>
 						<p align="left"><a href="http://www.w3.org/standards/techs/owl">http://www.w3.org/standards/techs/owl</a></p>
 					</section>
 					<section>
 						<h3>OWL</h3>
-						<br>
-						<p align="left">OWL se basa en Lógica Descriptiva (DL)</p><br>
-						<p align="left">Representación computacional de un dominio de conocimiento:
-						<ul>
-							<li>Razonamiento automático: inferir conocimiento "nuevo" (*), consultas, consistencia, clasificar entidades contra la ontología, ...</li>						
-							<li>Integrar conocimiento disperso</li>
-						</ul>
+						<br><br>
+						<p align="left">OWL is based in Description Logics (DL)</p><br>
+						<p align="left">Automated reasoning can be used for inference: "if a cow is a kind of animal and animal is a kind of organism, then cow is a kind of organism"</p><br>
 						</p>
 					</section>
 
 					<section>
-						<h3>Sintaxis OWL</h3>
+						<h3>OWL syntax</h3>
 						<br>
-						<p align="left">Para ordenadores: <strong>RDF/XML</strong>, OWL/XML, ...</p>
+						<p align="left"><b>For computers</b>: RDF/XML, OWL/XML, ...</p>
 						<img src="OWL_rdf_xml.png">
-						<p align="left">Para humanos: <strong>Manchester OWL Syntax</strong>, functional, ...</p>
+						<p align="left">For human beings: Manchester OWL Syntax, functional, ...</p>
 						<img src="OWL_mos.png">
 					</section>
 					<section>
-						<h3>Semántica OWL</h3>
+						<h3>OWL semantics</h3>
 						<br>
-						<p align="left">Una ontología OWL esta compuesta de:
+						<p align="left">An OWL ontology is comprissed of:
 							<ul>
-								<li>Entidades: las entidades del dominio de conocimiento, <em>identificadas con URIs</em>, introducidas por el desarrollador 
-								("proteina", "participa_en", ...)</li>
-								<li>Axiomas: relacionan las entidades mediante el <em>vocabulario</em> lógico que ofrece OWL</li>
+								<li>Entities: the elements of the knowledge domain, identified with URIs, added by the ontology curator ("protein", "participates_in", ...)</li>
+								<li>Axioms: they relate entities through the logical standard <em>vocabulary</em> offered by OWL, creating asssertions about the knwoledge domain ("In order to be a protein and entity must participate in at least one metabolic process")
+								</li>
 							</ul>						
 						</p>
-						<p align="left">Una ontología puede importar otra (owl:import) y hacer referencia a sus entidades mediante axiomas</p>
+						<p align="left">An ontology can import (owl:import) other ontology and refer to its entities through axioms</p>
 					</section>
 					<section>
-						<h3>Entidades OWL</h3>
+						<h3>OWL entities</h3>
 						<br>
 
 							<ul>
-								<li>Individuos</li>
+								<li>Individuals</li>
 								<li>Clases</li>
-								<li>Propiedades
+								<li>Properties
 															<ul>
-																<li>Objeto</li>
-																<li>Anotación</li>
-																<li>Datos</li>
+																<li>Object</li>
+																<li>Anotation</li>
+																<li>Data</li>
 															</ul>	
 								</li>
 							</ul>						
 						</p>
 					</section>
 					<section>
-						<h3>Individuos</h3>
+						<h3>Individuals</h3>
 						<br><br>
 						<img src="Pizza_inds.png">
 						<p align="right">
 							<small><a href="http://owl.cs.manchester.ac.uk/tutorials/protegeowltutorial/">Manchester tutorial</a></small></p>
 					</section>
 					<section>
-						<h3>Propiedades</h3>
+						<h3>Properties</h3>
 						<br><br>
 						<img src="Pizza_props.png">
 						<p align="right">
 							<small><a href="http://owl.cs.manchester.ac.uk/tutorials/protegeowltutorial/">Manchester tutorial</a></small></p>
 					</section>
 					<section>
-						<h3>Clases</h3>
+						<h3>Classes</h3>
 						<br><br>
 						<img src="Pizza_clases.png">
 						<p align="right">
 							<small><a href="http://owl.cs.manchester.ac.uk/tutorials/protegeowltutorial/">Manchester tutorial</a></small></p>
 					</section>
 					<section>
-						<h3>Semántica OWL</h3>
+						<h3>OWL semantics</h3>
 						<br>
-						<p align="left">Una ontología OWL formada por individuos y clases es una "Base de Conocimiento" (KB) formada por:
+						<p align="left">An OWL ontology that includes classes and individuals is a Knowledge Base:
 						<br>
 						<ul>
-							<li>TBox (Terminological Box): clases (~ "esquema")</li>		
-							<li>Abox (Assertional Box): individuos (~ "datos")</li>				
+							<li>TBox (Terminological Box): classes (sort of "eschema" in DB)</li>		
+							<li>Abox (Assertional Box): individuals (sort of "data" in DB)</li>				
 						</ul>
 						</p>
 					</section>
 					<section>
-						<h3>Clases</h3>
+						<h3>Classes</h3>
 						<br><br>
 						<img src="Clase_OWL.png">
 					</section>
 					<section>
-						<h3>Clase subclase</h3>
+						<h3>Class subclass (subsumption)</h3>
 						<br><br>
 						<img src="Clase_SubClase_OWL.png">
 					</section>
 					<section>
-						<h3>Clases equivalentes</h3>
+						<h3>Equivalent classes</h3>
 						<br><br>
 						<img src="Clase_equiv_OWL.png">
 					</section>
 					<section>
-						<h3>Jerarquía de clases (Taxonomía)</h3>
+						<h3>Class hierarchy (Taxonomy)</h3>
 						<br><br>
 						<img src="OWL_is_a.png">
 					</section>
 					<section>
-						<h3>Condiciones necesarias</h3>
+						<h3>Necessary conditions</h3>
 						<br><br>
 						<img src="OWL_necessary.png">
 					</section>
 					<section>
-						<h3>Condiciones necesarias y suficientes</h3>
+						<h3>Necessary and sufficient conditions</h3>
 						<br><br>
 						<img src="OWL_necessary_and_sufficient.png">
 					</section>
 					<section>
-						<h3>Restricción existencial (some)</h3>
+						<h3>Existential restriction (some)</h3>
 						<br><br>
 						<img src="Pizza_existential.png">
 						<p align="right">
 							<small><a href="http://owl.cs.manchester.ac.uk/tutorials/protegeowltutorial/">Manchester tutorial</a></small></p>
 					</section>
 					<section>
-						<h3>Restricción universal (only)</h3>
+						<h3>Universal restriction (only)</h3>
 						<br><br>
 						<img src="Pizza_universal.png">
 						<p align="right">
@@ -252,7 +241,7 @@
 					</section>
 					
 					<section>
-						<h3>Restricción a un individuo (value)</h3>
+						<h3>Restriction to a individual (value)</h3>
 						<br><br>
 						<img src="Pizza_has_value.png">
 						<p align="right">
@@ -260,7 +249,7 @@
 					</section>
 					
 					<section>
-						<h3>Restricciones cardinales</h3>
+						<h3>Cardinality constraints</h3>
 						<br><br>
 						<img src="Pizza_cardinality.png">
 						
@@ -269,29 +258,29 @@
 					</section>
 					
 					<section>
-						<h3>Más axiomas para clases</h3>
+						<h3>More axioms for classes</h3>
 						<br>
 						<p align="left">disjointFrom</p>
-						<p align="left">booleanos: not, or, and</p><br>
+						<p align="left">booleans: not, or, and</p><br>
 						<img src="owl_boolean.png">
 						<p align="right">
 							<small><a href="http://owl.cs.manchester.ac.uk/tutorials/protegeowltutorial/">Manchester tutorial</a></small></p>
 					</section>
 					<section>
-						<h3>Expresiones complejas</h3>
+						<h3>Complex expressions</h3>
 						<br><br>
 						<img src="OWL_complex_expression.png">
 					</section>
 			
 					<section>
-						<h3>Propiedades OWL</h3>
+						<h3>OWL properties</h3>
 						<br>
 						<img src="OWL_props.png">
 						<p align="right">
 							<small><a href="http://owl.cs.manchester.ac.uk/tutorials/protegeowltutorial/">Manchester tutorial</a></small></p>
 					</section>	
 					
-					<section>
+					<!--<section>
 						<h3>Jerarquía propiedades</h3>
 						<br><br>
 						<p align="left">Jerarquía propiedad-subpropiedad (~taxonomía pero con propiedades), ej:
@@ -307,81 +296,80 @@
 								</li>							
 							</ul>		
 						</p>
-					</section>	
+					</section>-->	
 					<section>
-						<h3>Características propiedades objeto</h3>
+						<h3>Object property features</h3>
 						<br>
 						<img src="props_f_1.png">
 						<p align="right">
 							<small><a href="http://owl.cs.manchester.ac.uk/tutorials/protegeowltutorial/">Manchester tutorial</a></small></p>
 					</section>	
 					<section>
-						<h3>Características propiedades objeto</h3>
+						<h3>Object property features</h3>
 						<br>
 						<img src="props_f_2.png">
 						<p align="right">
 							<small><a href="http://owl.cs.manchester.ac.uk/tutorials/protegeowltutorial/">Manchester tutorial</a></small></p>
 					</section>	
 					<section>
-						<h3>Características propiedades objeto</h3>
+						<h3>Object property features</h3>
 						<br>
 						<img src="props_f_3.png">
 						<p align="right">
 							<small><a href="http://owl.cs.manchester.ac.uk/tutorials/protegeowltutorial/">Manchester tutorial</a></small></p>
 					</section>	
-					<section>
+					<!--<section>
 						<h3>Características propiedades datos</h3>
 						<br>
 						<p align="left">Solo funcional</p><br>
 						<p align="left">Dominio clases, rango datatypes</p>
-					</section>	
+					</section>-->	
 					<section>
-						<h3>Propiedades anotación</h3>
+						<h3>Annotation properties</h3>
 						<br>
-						<p align="left">Anotar con lenguaje natural entidades 
-						(propiedades, clases, individuos), axiomas, ontologías</p><br>
-						<p align="left">Fuera de la semántica</p><br>
-						<p align="left">rdfs:label, rdfs:comment, dublin core, a medida</p>
+						<p align="left">Natural language information that can be attached to entities (properties, individuals, classes), axioms, ontologies</p><br>
+						<p align="left">No semantics</p><br>
+						<p align="left">rdfs:label, rdfs:comment, dublin core, create new ones ...</p>
 					</section>
 					<section>
-						<h3>Individuos</h3>
+						<h3>Individuals</h3>
 						<br>
-						<p align="left">Miembro de una o más clases (Types)</p><br>
-						<p align="left">Igual (SameAs) o diferente (DifferentFrom) a otro individuo</p><br>
-						<p align="left">Relaciones binarias con otros individuos o datos (triples), positivas o negativas</p><br>
+						<p align="left">Member of one or more classes (Types)</p><br>
+						<p align="left">SameAs or DifferentFrom other individuals</p><br>
+						<p align="left">Binary relations with other individuals or data (triples), positive or negative</p><br>
 					</section>
 					<section>
-						<h3>Razonamiento automático</h3>
+						<h3>Automated reasoning</h3>
 						<br>
-						<p align="left">Un razonador infiere los "nuevos" axiomas que implican los axiomas que hemos introducido en la ontología</p><br>
-						<p align="left">El razonador infiere <i>todos</i> los axiomas; es útil para tratar con conocimiento complejo</p><br>
+						<p align="left">A reasoner will infer the "new" (*?!) axioms that the axioms we have stated in the ontology imply</p><br>
+						<p align="left">The reasoner will infer <i>all</i> the implied axioms: it is useful to deal with complex knowledge</p><br>
 						<p align="left">Open World Assumption (OWA)</p>
 						<br>
-						<p align="left">(Falta de) Unique Name Assumption (¡owl:sameAs!)</p>
+						<p align="left">(Lack of) Unique Name Assumption (and use of owl:sameAs)</p>
 					</section>
 					<section>
-						<h3>Tareas más comunes razonamiento automático</h3>
+						<h3>Reasoning common tasks</h3>
 						<br>
-						<p align="left">Mantener taxonomía</p><br>
-						<p align="left">Consistencia</p><br>
-						<p align="left">Clasificar entidades y consultas</p>
+						<p align="left">Maintain a taxonomy</p><br>
+						<p align="left">Check consistency</p><br>
+						<p align="left">Clasify entities and pose queries against the ontology</p>
 					</section>
 					<section>
-						<h3>Mantener una taxonomía</h3>
+						<h3>Maintain a taxonomy</h3>
 						<br>
 						<img src="Normalisation_instance.png">
 					</section>
 					<section>
-						<h3>Consistencia</h3>
+						<h3>Consistency</h3>
 						<br>
 						<img src="consistencia.png">
 					</section>
 					<section>
-						<h3>Clasificar entidades, consultas</h3>
+						<h3>Clasify entities, queries</h3>
 						<br><br>
-						<p align="left">Clasificar entidades: dada una entidad nueva, como se relaciona con las 
-						demas entidades (types, equivalentTo, subClassOf, triples)</p><br>
-						<p align="left">Una consulta es una clase anónima que clasificamos contra la ontología como si fuese una entidad</p>
+						<p align="left">Clasify entities: given an entity (e.g. an individual with certain relations), infer how it relates to other entities (e.g. to which classes it belongs) and the consistency of the model including the new entity
+						</p><br>
+						<p align="left">A query is an anonymous class that we classify against the ontology as if it were and entity</p>
 					</section>										
 				</section>
 		</section>
@@ -391,84 +379,102 @@
 				<h2>Ontology engineering tools</h2>
 			</section>
 			<section>
-					<h3>OWL API</h3>
+					<h3>APIs</h3>
 					<br>
-					<p align="left"><a href="http://owlapi.sourceforge.net/">http://owlapi.sourceforge.net/</a></p><br>
-					<p align="left"><a href="http://github.com/owlcs/owlapi">http://github.com/owlcs/owlapi</a></p><br>
+					<p align="left"><a href="http://owlapi.sourceforge.net/">OWL API</a></p>
+					<p align="left"><a href="http://search.cpan.org/dist/ONTO-PERL/">ONTO-PERL</a></p>
+					<p align="left">...</p><br>
 			</section>
 			<section>
-					<h3>Protege</h3>
+					<h3>Ontology editors</h3>
 					<br>
+					<p align="left"><a href="http://protege.stanford.edu/">Protege</a></p>
+					<p align="left"><a href="http://www.topquadrant.com/tools/modeling-topbraid-composer-standard-edition/">TopBraid composer</a></p>
+					<p align="left">...</p><br>
 			</section>
 			<section>
-					<h3>TopBraid composer</h3>
-					<br>
-			</section>
-			<section>
-					<h3>Neon</h3>
-					<br>
-			</section>
-			<section>
-					<h3>Reasoners!?</h3>
-					<br>
+					<h3>Automated Reasoners</h3>
+					<br><br>
+					<p align="left"><a href="http://clarkparsia.com/pellet/">Pellet</a></p>
+					<p align="left"><a href="http://code.google.com/p/factplusplus/">FaCT++</a></p>
+					<p align="left"><a href="http://hermit-reasoner.com/">Hermit</a></p>
+					<p align="left"><a href="http://code.google.com/p/elk-reasoner/">Elk</a></p>
+					<p align="left"><a href="http://racer.sts.tuhh.de/">Racer</a></p>
+					<p align="left">...</p>
 			</section>
 		</section>
 		<section>
 			<section>
 				<br><br><br><br>
 				<h2>Ontology engineering practices</h2>
-				
-				
-
-
 			</section>
 			<section>
 			<h3>Scope</h3>
 				<br>
-				<p>Define and stick to a scope (e.g. Cell Cycle) </p>
+				<p align="left">Define a scope: domain (e.g. Cell Cycle), application (e.g. BioPAX), ... </p><br><br>
+				<p align="right" class="fragment roll-in">Stick to it</p>
 			</section>
 			<section>
 			<h3>Identifiers</h3>
 				<br>
-				URI scheme
-				common identifiers: identifiers.org
-				alphanumeric ids + rdfs:label
+				<p align="left">Define a Semantic Web friendly URI scheme (<a href="http://www.w3.org/TR/cooluris/">Cool URIs for the Semantic Web</a>, <a href="http://linkeddatabook.com/editions/1.0/#htoc10">Linked Data URIs</a></p>, ... )<br><br>
+				<p align="right" class="fragment roll-in">Stick to it</p>
+			</section>
+			<section>
+			<h3>Identifiers</h3>
+				<br><br>
+				<p align="left">Use common identifiers (e.g. <a href="http://identifiers.org/">identifiers.org</a>)</p><br>
+				<p align="left">Use alphanumeric identifiers in URIs and rdfs:label for common names</p><br>
+				<p align="left">Use permament URLs (e.g. <a href="http://purl.oclc.org">http://purl.oclc.org</a>)</p>
 			</section>
 			<section>
 			<h3>Interoperability</h3>
-				<br>
+				<br><br>
 				<p align="left" class="fragment roll-in">Commonly used Upper Level Ontology (e.g. BFO) </p>
-				<p align="left" class="fragment roll-in">Commonly used properties (e.g. RO) </p>
-				<p align="left" class="fragment roll-in">Reuse exsiting ontologies, extend them if needed ... </p>
-				<p align="left" class="fragment roll-in"> ... and only then, and if completely necessary, create new classes </p>
+				<p align="right" class="fragment roll-in">Or your own one, but be explicit</p><br><br>
+				<p align="left" class="fragment roll-in">Commonly used properties (e.g. OBO Relations Ontology) </p>
+				<p align="right" class="fragment roll-in">Or your own one, but be explicit</p>
+
+				
 			</section>
 			<section>
-			<h3>Automate tasks</h3>
-				<br>
-				<p> 
-				    Manipulation: OWL API, OPPL, Tawny OWL, Mungall
-				    Releases: OORT, Version control (Mungall and Clark posts)..</p>
-				    <p>Apply reasoning continously</p>
+			<h3>Interoperability</h3>
+				<br><br>
+				<p align="left" class="fragment roll-in">Reuse existing ontologies, extend them if needed ... </p>
+				<p align="left" class="fragment roll-in"> ... and only then, and if completely necessary, create new classes </p><br><br>
+				<p align="left" class="fragment roll-in">Link to other ontologies with owl:equivalentClass, rdf:type, rdf:subClassOf, ... </p>
 			</section>
 			<section>
-			<h3>Documentation</h3>
-				<br>
-				<p>Use annotation properties a lot</p>
+			<h3>Automate</h3>
+				<br><br>
+				<p align="left"> 
+				    Ontology manipulation (create entities, add/remove axioms): 
+				    <ul>
+					<li>Low level APIs: OWL API, ONTO-PERL, ... </li>
+					<li>High level APIs: <a href="http://oppl2.sourceforge.net/">OPPL</a>, <a href="https://github.com/phillord/tawny-owl">Tawny OWL</a>, <a href="https://github.com/cmungall/owljs">OWL-JS</a>, ...</li>
+				    </ul>
+				</p><br><br>				    
+				<p align="left">Releases: OORT (<a href="https://code.google.com/p/owltools/">OWLtools</a>)</p>
 			</section>
 			<section>
-			<h3>Ontology Design Patterns</h3>
-				<br>
-				<p></p>
+			<h3>Automate</h3>
+				<br><br>
+				<p align="left">Use a <a href="http://en.wikipedia.org/wiki/Revision_Control_System">VCS</a> as usual (e.g. <a href="http://github.com/">GitHub</a>), but be aware of <a href="http://douroucouli.wordpress.com/2014/03/30/the-perils-of-managing-owl-in-a-version-control-system/">perils of managing OWL in a VCS</a></p><br><br>				    
+				<p align="left">Apply automated reasoning after every change</p>
+				
 			</section>
 			<section>
-			<h3>Pitfalls</h3>
-				<br>
-				<p>Pitfall detector</p>
+			<h3>Document</h3>
+				<br><br>
+				<p align="left">Use annotation properties everywhere: rdfs:label, rdfs:comment, Dublin Core, your own ones</p>
+				
 			</section>
-			
-			<h3>Semantic Web best practices</h3>
-				<br>
-				Use isDescribedBy predicate
+			<section>
+			<h3>Modelling</h3>
+				<br><br>
+				<p align="left">The more explicit (axioms), the better (Within reason). Reasoner always knows better than you</p><br><br>
+				<p align="left">Follow Ontology Design Patterns (ODPs) and create/share your own ones: <a href="http://odps.sf.net">odps.sf.net</a>, <a href="http://ontologydesignpatterns.org/">ontologydesignpatterns.org</a></p><br><br>
+				<p align="left">Pitfalls: OntOlogy Pitfall Scanner (<a href="http://oeg-lia3.dia.fi.upm.es/oops/index-content.jsp">OOPS!</a>), <a href="http://oeg-lia3.dia.fi.upm.es/oops/catalogue.jsp">catalogue of ontology pitfalls</a></p>
 			</section>
 
 			<section>
@@ -482,14 +488,36 @@
 				  OBO Relation Ontology, 
 				  Well documented,
 				  Users, 
-				  Collaboratively</p><br>
+				  Collaboratively</p><br><br>
+				 <p align="left"><a href="http://bioportal.bioontology.org/">NCBO BioPortal</a></p><br><br>
 			</section>
+			
 			<section>
-			<h3>Community</h3>
-				<br>NCBO BioPortal
+			<h3>An actual (not so good :P) example</h3>
+				<br><br>
+				<p align="left">BIOMO (Biological Observation Matrix Ontology):
+				<ul>
+				    <li>Link to github and bioportal</li>
+				    <li>Open with Protégé</li>
+				    <li>See RDF/XML syntax</li> 
+				</ul>
+				</p>
 
 			</section>
 		</section>
+		<section>
+			<section>
+				<br>
+				<h3>Use of Semantic Web resources for knowledge discover (tutorial)</h3>
+				<br><br>
+				<p align="left">Disclaimer</p>
+				<p align="left"><a href="MikelEganaARanguren_3SBiologyTrento_2014.ppt">Slides</a></p>
+			</section>
+		</section>
+			
+			
+		
+		
 		</div>
 		</div>
 
