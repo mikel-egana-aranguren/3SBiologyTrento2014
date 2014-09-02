@@ -44,6 +44,7 @@
 				<p>
 					<small>Mikel Egaña Aranguren</small><br>
 					<small><a href="http://mikeleganaaranguren.com/">http://mikeleganaaranguren.com</a> / <a href="mikel.egana@ehu.es">mikel.egana@ehu.es</a></small><br>
+					<img  src="blanco_pequeno.jpg" alt="upv-ehu eman ta zabal zazu">
 				</p>
 			</section>
 			<section>
@@ -119,17 +120,18 @@
 					</section>
 					<section>
 						<h3>OWL</h3>
-						<br>
-						<p align="left">OWL is based in Description Logics (DL), so automated reasoning can be used to infer "new" (*?!) knowledge</p>: "if a cow is a kind of animal and animal is a kind of organism, then cow is a kind of organism"<br>
+						<br><br>
+						<p align="left">OWL is based in Description Logics (DL)</p><br>
+						<p align="left">Automated reasoning can be used for inference: "if a cow is a kind of animal and animal is a kind of organism, then cow is a kind of organism"</p><br>
 						</p>
 					</section>
 
 					<section>
 						<h3>OWL syntax</h3>
 						<br>
-						<p align="left"><b>For computers</b>: <strong>RDF/XML</strong>, OWL/XML, ...</p>
+						<p align="left"><b>For computers</b>: RDF/XML, OWL/XML, ...</p>
 						<img src="OWL_rdf_xml.png">
-						<p align="left">For human beings: <strong>Manchester OWL Syntax</strong>, functional, ...</p>
+						<p align="left">For human beings: Manchester OWL Syntax, functional, ...</p>
 						<img src="OWL_mos.png">
 					</section>
 					<section>
@@ -138,7 +140,7 @@
 						<p align="left">An OWL ontology is comprissed of:
 							<ul>
 								<li>Entities: the elements of the knowledge domain, identified with URIs, added by the ontology curator ("protein", "participates_in", ...)</li>
-								<li>Axioms: they relate entities through the logical standard <em>vocabulary</em> offered by OWL, creating asssertions about the knwoledge domain "In order to be a protein and entity must participate in at least one metabolic process"
+								<li>Axioms: they relate entities through the logical standard <em>vocabulary</em> offered by OWL, creating asssertions about the knwoledge domain ("In order to be a protein and entity must participate in at least one metabolic process")
 								</li>
 							</ul>						
 						</p>
@@ -231,7 +233,7 @@
 							<small><a href="http://owl.cs.manchester.ac.uk/tutorials/protegeowltutorial/">Manchester tutorial</a></small></p>
 					</section>
 					<section>
-						<h3>Universal restriction(only)</h3>
+						<h3>Universal restriction (only)</h3>
 						<br><br>
 						<img src="Pizza_universal.png">
 						<p align="right">
@@ -247,7 +249,7 @@
 					</section>
 					
 					<section>
-						<h3>Cardinaility constraintns</h3>
+						<h3>Cardinality constraints</h3>
 						<br><br>
 						<img src="Pizza_cardinality.png">
 						
@@ -259,7 +261,7 @@
 						<h3>More axioms for classes</h3>
 						<br>
 						<p align="left">disjointFrom</p>
-						<p align="left">booleanos: not, or, and</p><br>
+						<p align="left">booleans: not, or, and</p><br>
 						<img src="owl_boolean.png">
 						<p align="right">
 							<small><a href="http://owl.cs.manchester.ac.uk/tutorials/protegeowltutorial/">Manchester tutorial</a></small></p>
@@ -332,42 +334,42 @@
 					<section>
 						<h3>Individuals</h3>
 						<br>
-						<p align="left">Member of on or more classes (Types)</p><br>
+						<p align="left">Member of one or more classes (Types)</p><br>
 						<p align="left">SameAs or DifferentFrom other individuals</p><br>
 						<p align="left">Binary relations with other individuals or data (triples), positive or negative</p><br>
 					</section>
 					<section>
 						<h3>Automated reasoning</h3>
 						<br>
-						<p align="left">Un razonador infiere los "nuevos" axiomas que implican los axiomas que hemos introducido en la ontología</p><br>
-						<p align="left">El razonador infiere <i>todos</i> los axiomas; es útil para tratar con conocimiento complejo</p><br>
+						<p align="left">A reasoner will infer the "new" (*?!) axioms that the axioms we have stated in the ontology imply</p><br>
+						<p align="left">The reasoner will infer <i>all</i> the implied axioms: it is useful to deal with complex knowledge</p><br>
 						<p align="left">Open World Assumption (OWA)</p>
 						<br>
-						<p align="left">(Falta de) Unique Name Assumption (¡owl:sameAs!)</p>
+						<p align="left">(Lack of) Unique Name Assumption (and use of owl:sameAs)</p>
 					</section>
 					<section>
-						<h3>Tareas más comunes razonamiento automático</h3>
+						<h3>Reasoning common tasks</h3>
 						<br>
-						<p align="left">Mantener taxonomía</p><br>
-						<p align="left">Consistencia</p><br>
-						<p align="left">Clasificar entidades y consultas</p>
+						<p align="left">Maintain a taxonomy</p><br>
+						<p align="left">Check consistency</p><br>
+						<p align="left">Clasify entities and pose queries against the ontology</p>
 					</section>
 					<section>
-						<h3>Mantener una taxonomía</h3>
+						<h3>Maintain a taxonomy</h3>
 						<br>
 						<img src="Normalisation_instance.png">
 					</section>
 					<section>
-						<h3>Consistencia</h3>
+						<h3>Consistency</h3>
 						<br>
 						<img src="consistencia.png">
 					</section>
 					<section>
-						<h3>Clasificar entidades, consultas</h3>
+						<h3>Clasify entities, queries</h3>
 						<br><br>
-						<p align="left">Clasificar entidades: dada una entidad nueva, como se relaciona con las 
-						demas entidades (types, equivalentTo, subClassOf, triples)</p><br>
-						<p align="left">Una consulta es una clase anónima que clasificamos contra la ontología como si fuese una entidad</p>
+						<p align="left">Clasify entities: given an entity (e.g. an individual with certain relations), infer how it relates to other entities (e.g. to which classes it belongs) and the consistency of the model including the new entity
+						</p><br>
+						<p align="left">A query is an anonymous class that we classify against the ontology as if it were and entity</p>
 					</section>										
 				</section>
 		</section>
@@ -377,26 +379,28 @@
 				<h2>Ontology engineering tools</h2>
 			</section>
 			<section>
-					<h3>OWL API</h3>
+					<h3>APIs</h3>
 					<br>
-					<p align="left"><a href="http://owlapi.sourceforge.net/">http://owlapi.sourceforge.net/</a></p><br>
-					<p align="left"><a href="http://github.com/owlcs/owlapi">http://github.com/owlcs/owlapi</a></p><br>
+					<p align="left"><a href="http://owlapi.sourceforge.net/">OWL API</a></p>
+					<p align="left"><a href="http://search.cpan.org/dist/ONTO-PERL/">ONTO-PERL</a></p>
+					<p align="left">...</p><br>
 			</section>
 			<section>
-					<h3>Protege</h3>
+					<h3>Ontology editors</h3>
 					<br>
+					<p align="left"><a href="http://protege.stanford.edu/">Protege</a></p>
+					<p align="left"><a href="http://www.topquadrant.com/tools/modeling-topbraid-composer-standard-edition/">TopBraid composer</a></p>
+					<p align="left">...</p><br>
 			</section>
 			<section>
-					<h3>TopBraid composer</h3>
-					<br>
-			</section>
-			<section>
-					<h3>Neon</h3>
-					<br>
-			</section>
-			<section>
-					<h3>Reasoners!?</h3>
-					<br>
+					<h3>Automated Reasoners</h3>
+					<br><br>
+					<p align="left"><a href="http://clarkparsia.com/pellet/">Pellet</a></p>
+					<p align="left"><a href="http://code.google.com/p/factplusplus/">FaCT++</a></p>
+					<p align="left"><a href="http://hermit-reasoner.com/">Hermit</a></p>
+					<p align="left"><a href="http://code.google.com/p/elk-reasoner/">Elk</a></p>
+					<p align="left"><a href="http://racer.sts.tuhh.de/">Racer</a></p>
+					<p align="left">...</p>
 			</section>
 		</section>
 		<section>
@@ -468,8 +472,8 @@
 			<section>
 			<h3>Modelling</h3>
 				<br><br>
-				<p align="left">The more explicit (axioms), the better. Reasoner always knows better than you</p><br><br>
-				<p align="left">Follow Ontology Design Patterns (ODPs) and create/share your own ones: <a href="http://odps.sf.net">odps.sf.net</a>,<a href="http://ontologydesignpatterns.org/">ontologydesignpatterns.org</a></p><br><br>
+				<p align="left">The more explicit (axioms), the better (Within reason). Reasoner always knows better than you</p><br><br>
+				<p align="left">Follow Ontology Design Patterns (ODPs) and create/share your own ones: <a href="http://odps.sf.net">odps.sf.net</a>, <a href="http://ontologydesignpatterns.org/">ontologydesignpatterns.org</a></p><br><br>
 				<p align="left">Pitfalls: OntOlogy Pitfall Scanner (<a href="http://oeg-lia3.dia.fi.upm.es/oops/index-content.jsp">OOPS!</a>), <a href="http://oeg-lia3.dia.fi.upm.es/oops/catalogue.jsp">catalogue of ontology pitfalls</a></p>
 			</section>
 
@@ -490,13 +494,30 @@
 			
 			<section>
 			<h3>An actual (not so good :P) example</h3>
-				<br>BIOMO
-				Protege
-				RDF/XML 
-				
+				<br><br>
+				<p align="left">BIOMO (Biological Observation Matrix Ontology):
+				<ul>
+				    <li>Link to github and bioportal</li>
+				    <li>Open with Protégé</li>
+				    <li>See RDF/XML syntax</li> 
+				</ul>
+				</p>
 
 			</section>
 		</section>
+		<section>
+			<section>
+				<br>
+				<h3>Use of Semantic Web resources for knowledge discover (tutorial)</h3>
+				<br><br>
+				<p align="left">Disclaimer</p>
+				<p align="left"><a href="MikelEganaARanguren_3SBiologyTrento_2014.ppt">Slides</a></p>
+			</section>
+		</section>
+			
+			
+		
+		
 		</div>
 		</div>
 
