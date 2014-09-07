@@ -91,14 +91,14 @@
 			<section>
 				<h3>Functions</h3>
 				<br/><br/>
-				<p align="left">Schema fo Knowledge Base (e.g. ), vocabulary for publishing Linked Data, vocabulary for common database  annotation (e.g. Gene Ontology), text mining, service description (e.g. SADI), data analysis, ... </p>
+				<p align="left">"Schema" for Knowledge Base <br/>Vocabulary for publishing Linked Data<br/> Vocabulary for common database annotation (e.g. GO)<br/> Text mining <br/> Web Services description (e.g. SADI)<br/> Data analysis<br/> ... </p>
 				
 			</section>
 			<section>
 				<h3>Gene Ontology</h3>
 				<br>
 				<p align="left">Controlled vocabulary for describing molecular function, cellular component and biological process of <i>gene products</i></p><br>
-				<p align="left">Database integration through GAF files, data analysis (e.g. Term Enrichment), ...
+				<p align="left">Database integration through Gene Association Files (GAF), data analysis (e.g. Term Enrichment), ...
 				</p><br>
 			</section>
 		</section>
@@ -140,7 +140,7 @@
 						<p align="left">An OWL ontology is comprissed of:
 							<ul>
 								<li>Entities: the elements of the knowledge domain, identified with URIs, added by the ontology curator ("protein", "participates_in", ...)</li>
-								<li>Axioms: they relate entities through the logical standard <em>vocabulary</em> offered by OWL, creating asssertions about the knwoledge domain ("In order to be a protein and entity must participate in at least one metabolic process")
+								<li>Axioms: they relate entities through the logical standard <em>vocabulary</em> offered by OWL, creating asssertions about the knwoledge domain ("In order to be a protein an entity must participate in at least one metabolic process")
 								</li>
 							</ul>						
 						</p>
@@ -184,7 +184,7 @@
 						<p align="right">
 							<small><a href="http://owl.cs.manchester.ac.uk/tutorials/protegeowltutorial/">Manchester tutorial</a></small></p>
 					</section>
-					<section>
+					<!--<section>
 						<h3>OWL semantics</h3>
 						<br>
 						<p align="left">An OWL ontology that includes classes and individuals is a Knowledge Base:
@@ -194,7 +194,7 @@
 							<li>Abox (Assertional Box): individuals (sort of "data" in DB)</li>				
 						</ul>
 						</p>
-					</section>
+					</section>-->
 					<section>
 						<h3>Classes</h3>
 						<br><br>
@@ -266,11 +266,6 @@
 						<p align="right">
 							<small><a href="http://owl.cs.manchester.ac.uk/tutorials/protegeowltutorial/">Manchester tutorial</a></small></p>
 					</section>
-					<section>
-						<h3>Complex expressions</h3>
-						<br><br>
-						<img src="OWL_complex_expression.png">
-					</section>
 			
 					<section>
 						<h3>OWL properties</h3>
@@ -339,6 +334,11 @@
 						<p align="left">Binary relations with other individuals or data (triples), positive or negative</p><br>
 					</section>
 					<section>
+					<h3>Complex expressions</h3>
+						<br><br>
+						<img src="OWL_complex_expression.png">
+					</section>
+					<section>
 						<h3>Automated reasoning</h3>
 						<br>
 						<p align="left">A reasoner will infer the "new" (*?!) axioms that the axioms we have stated in the ontology imply</p><br>
@@ -400,6 +400,7 @@
 					<p align="left"><a href="http://hermit-reasoner.com/">Hermit</a></p>
 					<p align="left"><a href="http://code.google.com/p/elk-reasoner/">Elk</a></p>
 					<p align="left"><a href="http://racer.sts.tuhh.de/">Racer</a></p>
+					<p align="left"><a href="http://trowl.eu/">TrOWL</a></p>
 					<p align="left">...</p>
 			</section>
 		</section>
@@ -417,7 +418,10 @@
 			<section>
 			<h3>Identifiers</h3>
 				<br>
-				<p align="left">Define a Semantic Web friendly URI scheme (<a href="http://www.w3.org/TR/cooluris/">Cool URIs for the Semantic Web</a>, <a href="http://linkeddatabook.com/editions/1.0/#htoc10">Linked Data URIs</a></p>, ... )<br><br>
+				<p align="left">Define a Semantic Web friendly URI scheme: <br><br>
+				<a href="http://www.w3.org/TR/cooluris/">Cool URIs for the Semantic Web</a><br>
+				<a href="http://linkeddatabook.com/editions/1.0/#htoc10">Linked Data URIs</a><br>
+				...<br></p><br><br>
 				<p align="right" class="fragment roll-in">Stick to it</p>
 			</section>
 			<section>
@@ -433,7 +437,7 @@
 				<p align="left" class="fragment roll-in">Commonly used Upper Level Ontology (e.g. BFO) </p>
 				<p align="right" class="fragment roll-in">Or your own one, but be explicit</p><br><br>
 				<p align="left" class="fragment roll-in">Commonly used properties (e.g. OBO Relations Ontology) </p>
-				<p align="right" class="fragment roll-in">Or your own one, but be explicit</p>
+				<p align="right" class="fragment roll-in">Or your own ones, but be explicit</p>
 
 				
 			</section>
@@ -441,7 +445,7 @@
 			<h3>Interoperability</h3>
 				<br><br>
 				<p align="left" class="fragment roll-in">Reuse existing ontologies, extend them if needed ... </p>
-				<p align="left" class="fragment roll-in"> ... and only then, and if completely necessary, create new classes </p><br><br>
+				<p align="left" class="fragment roll-in"> ... and only then, and if completely necessary, create new entities </p><br><br>
 				<p align="left" class="fragment roll-in">Link to other ontologies with owl:equivalentClass, rdf:type, rdf:subClassOf, ... </p>
 			</section>
 			<section>
@@ -466,13 +470,17 @@
 			<section>
 			<h3>Document</h3>
 				<br><br>
-				<p align="left">Use annotation properties everywhere: rdfs:label, rdfs:comment, Dublin Core, your own ones</p>
+				<p align="left">Use annotation properties everywhere a lot: <br><br>
+				rdfs:label<br> 
+				rdfs:comment<br> 
+				Dublin Core<br> 
+				your own ones</p>
 				
 			</section>
 			<section>
 			<h3>Modelling</h3>
 				<br><br>
-				<p align="left">The more explicit (axioms), the better (Within reason). Reasoner always knows better than you</p><br><br>
+				<p align="left">The more explicit (axioms), the better (within reason). Reasoner always knows better than you</p><br><br>
 				<p align="left">Follow Ontology Design Patterns (ODPs) and create/share your own ones: <a href="http://odps.sf.net">odps.sf.net</a>, <a href="http://ontologydesignpatterns.org/">ontologydesignpatterns.org</a></p><br><br>
 				<p align="left">Pitfalls: OntOlogy Pitfall Scanner (<a href="http://oeg-lia3.dia.fi.upm.es/oops/index-content.jsp">OOPS!</a>), <a href="http://oeg-lia3.dia.fi.upm.es/oops/catalogue.jsp">catalogue of ontology pitfalls</a></p>
 			</section>
@@ -497,8 +505,8 @@
 				<br><br>
 				<p align="left">BIOMO (Biological Observation Matrix Ontology):
 				<ul>
-				    <li>Link to github and bioportal</li>
-				    <li>Open with Protégé</li>
+				    <li><a href="https://github.com/mikel-egana-aranguren/biom-ld/blob/master/ontology/biomo.owl">Github</a> / <a href="http://purl.bioontology.org/ontology/BIOMO">bioportal</a></li>
+				    <li>Open with Protégé 4</li>
 				    <li>See RDF/XML syntax</li> 
 				</ul>
 				</p>
@@ -510,7 +518,6 @@
 				<br>
 				<h3>Use of Semantic Web resources for knowledge discover (tutorial)</h3>
 				<br><br>
-				<p align="left">Disclaimer</p>
 				<p align="left"><a href="MikelEganaARanguren_3SBiologyTrento_2014.ppt">Slides</a></p>
 			</section>
 		</section>
